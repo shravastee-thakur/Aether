@@ -33,7 +33,7 @@ const Features = () => {
   ];
 
   return (
-    <section className="relative w-full py-24 bg-white overflow-hidden">
+    <section className="relative w-full py-16 bg-white overflow-hidden">
       {/* --- BACKGROUND CONTINUITY --- */}
       <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-slate-200 to-transparent" />
       <div className="absolute top-[-20%] right-[-10%] w-[40vw] h-[40vw] bg-slate-50 rounded-full blur-[100px] pointer-events-none" />
