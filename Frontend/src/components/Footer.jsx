@@ -144,9 +144,9 @@ const Footer = () => {
               <li className="flex items-start gap-3">
                 <MapPin className="w-5 h-5 text-slate-500 mt-0.5" />
                 <span className="text-slate-400 text-sm">
-                  101 Future Blvd, Tech District
+                  101 Maker Towers, Nariman Point,
                   <br />
-                  San Francisco, CA 94103
+                  Mumbai, India 400000
                 </span>
               </li>
               <li className="flex items-start gap-3">
@@ -155,7 +155,7 @@ const Footer = () => {
                   href="tel:+15550199"
                   className="text-slate-400 hover:text-cyan-400 text-sm transition-colors duration-200"
                 >
-                  +1 (555) 019-2834
+                  +91 (22) 1111 1111
                 </a>
               </li>
             </ul>
@@ -164,7 +164,7 @@ const Footer = () => {
 
         {/* --- BOTTOM SECTION: COPYRIGHT --- */}
         <div className="border-t border-white/10 pt-6 flex flex-col md:flex-row items-center justify-between gap-4">
-          <p className="text-slate-500 text-sm text-center md:text-left">
+          <p className="text-white text-sm text-center md:text-left">
             Copyright © 2026 Shravastee Thakur.
           </p>
 

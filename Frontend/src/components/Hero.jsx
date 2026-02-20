@@ -35,15 +35,7 @@ const Hero = () => {
       {/* --- MAIN CONTENT --- */}
       <div className="relative z-10 container mx-auto px-6 md:px-12 flex flex-col items-center text-center">
         {/* Status Badge */}
-        <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/60 border border-slate-200 backdrop-blur-md shadow-sm mb-8 animate-fade-in-up">
-          {/* <span className="relative flex h-2 w-2">
-            <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-indigo-500 opacity-75"></span>
-            <span className="relative inline-flex rounded-full h-2 w-2 bg-indigo-600"></span>
-          </span> */}
-          {/* <span className="text-xs font-medium text-slate-600 tracking-wide uppercase">
-            Aether Network v2.6
-          </span> */}
-        </div>
+        <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/60 border border-slate-200 backdrop-blur-md shadow-sm mb-8 animate-fade-in-up"></div>
 
         {/* Headline */}
         <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight text-slate-900 mb-6 leading-[1.1] max-w-5xl mx-auto animate-fade-in-up delay-100">
@@ -65,13 +57,11 @@ const Hero = () => {
           {/* Subtle Shadow Glow */}
           <div className="absolute -inset-0.5 bg-gradient-to-r from-indigo-500 to-cyan-500 rounded-lg blur opacity-20 group-hover:opacity-40 transition duration-500"></div>
 
-          <button className="relative flex items-center gap-3 px-8 py-4 bg-slate-900 rounded-lg leading-none text-white font-semibold hover:bg-slate-800 transition-all duration-300 hover:scale-[1.02] active:scale-[0.98] shadow-lg shadow-slate-900/20">
+          <button className="relative flex items-center gap-3 px-8 py-4 bg-[#0747a6] rounded-lg leading-none text-white font-semibold hover:bg-indigo-600 transition-all duration-300 hover:scale-[1.02] active:scale-[0.98] shadow-lg shadow-slate-900/20">
             <span>Enter the Aether</span>
             <ArrowRight className="w-5 h-5 text-indigo-300 group-hover:translate-x-1 transition-transform" />
           </button>
         </div>
-
-        
       </div>
 
       {/* --- OPTIMIZED CSS --- */}

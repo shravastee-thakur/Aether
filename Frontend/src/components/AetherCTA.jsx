@@ -43,7 +43,7 @@ const AetherCTA = () => {
               {/* Signup Button */}
               <button
                 type="submit"
-                className="flex items-center justify-center gap-2 px-8 py-4 bg-slate-900 hover:bg-indigo-600 text-white font-semibold rounded-lg shadow-lg shadow-slate-900/20 hover:shadow-indigo-600/30 transition-all duration-300 transform hover:-translate-y-0.5 whitespace-nowrap"
+                className="flex items-center justify-center gap-2 px-8 py-4 bg-[#0747a6] hover:bg-indigo-600 text-white font-semibold rounded-lg shadow-lg shadow-slate-900/20 hover:shadow-indigo-600/30 transition-all duration-300 transform hover:-translate-y-0.5 whitespace-nowrap"
               >
                 <span>Sign Up Free</span>
                 <ArrowRight className="w-5 h-5" />
