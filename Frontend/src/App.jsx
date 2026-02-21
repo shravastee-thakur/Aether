@@ -1,11 +1,9 @@
-import Navbar from "./components/Navbar";
-import Pricing from "./pages/Pricing";
+import OTPverify from "./pages/Otpverify";
 
 function App() {
   return (
     <div>
-      <Navbar />
-      <Pricing />
+      <OTPverify />
     </div>
   );
 }

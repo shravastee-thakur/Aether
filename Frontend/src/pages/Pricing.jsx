@@ -1,8 +1,9 @@
 import React, { useState } from "react";
-import { Check, X, HelpCircle, ArrowRight, Building2 } from "lucide-react";
+import { Check, X, HelpCircle, ArrowRight, Building2, ChevronDown } from 'lucide-react';
 
 const Pricing = () => {
   const [billingCycle, setBillingCycle] = useState("annual"); // 'annual' or 'monthly'
+  const [openFaqIndex, setOpenFaqIndex] = useState(null);
 
   const plans = [
     {
@@ -33,7 +34,7 @@ const Pricing = () => {
     },
     {
       name: "Standard",
-      price: { annual: 2988, monthly: 300 },
+      price: { annual: 2999, monthly: 300 },
       period: "per user/month",
       description:
         "Get more stuff done with unlimited boards, card mirroring, and more automation.",
@@ -51,34 +52,25 @@ const Pricing = () => {
         { text: "Planner", included: true },
         { text: "Advanced checklists", included: true },
         { text: "Card mirroring", included: true },
-        { text: "Custom Fields", included: true },
-        { text: "List colors", included: true },
-        { text: "Collapsible lists", included: true },
-        { text: "Single board guests", included: true },
-        { text: "Saved searches", included: true },
       ],
       cta: "Start Free Trial",
       popular: true,
     },
     {
       name: "Premium",
-      price: { annual: 5976, monthly: 600 },
+      price: { annual: 5999, monthly: 600 },
       period: "per user/month",
       description: "Add AI to your boards and admin controls to your toolkit.",
       tagline: "Everything in Standard, plus:",
       features: [
         { text: "Unlimited Power-Ups per board", included: true },
-        { text: "Unlimited storage (250MB/file)", included: true },
         { text: "Unlimited Workspace command runs", included: true },
         { text: "Assignee and due dates", included: true },
-        { text: "Card mirroring", included: true },
         { text: "Custom Fields", included: true },
         { text: "List colors", included: true },
         { text: "Collapsible lists", included: true },
-        { text: "Single board guests", included: true },
         { text: "Saved searches", included: true },
         { text: "Timeline view", included: true },
-        { text: "Calendar view", included: true },
         { text: "Dashboard view", included: true },
         { text: "AI-powered insights", included: true },
         { text: "Admin controls & permissions", included: true },
@@ -112,6 +104,9 @@ const Pricing = () => {
         "Yes! We offer special pricing for qualified nonprofits and educational institutions. Contact our sales team to learn more.",
     },
   ];
+  const toggleFaq = (index) => {
+    setOpenFaqIndex(openFaqIndex === index ? null : index);
+  };
 
   return (
     <div className="min-h-screen bg-white">
@@ -264,7 +259,7 @@ const Pricing = () => {
         </div>
       </section>
 
-      {/* --- FAQ SECTION --- */}
+      {/* --- FAQ ACCORDION SECTION --- */}
       <section className="py-16">
         <div className="container mx-auto px-6 md:px-12">
           <div className="text-center mb-12">
@@ -280,17 +275,40 @@ const Pricing = () => {
             {faqs.map((faq, index) => (
               <div
                 key={index}
-                className="bg-white border border-slate-200 rounded-xl p-6 hover:border-indigo-200 transition-colors duration-200"
+                className="bg-white border border-slate-200 rounded-xl overflow-hidden hover:border-indigo-200 transition-colors duration-200"
               >
-                <div className="flex items-start gap-4">
-                  <HelpCircle className="w-5 h-5 text-indigo-500 flex-shrink-0 mt-0.5" />
-                  <div>
-                    <h4 className="text-base font-semibold text-slate-900 mb-2">
+                <button
+                  onClick={() => toggleFaq(index)}
+                  className="w-full flex items-center justify-between p-6 text-left focus:outline-none focus:ring-2 focus:ring-indigo-500/20"
+                  aria-expanded={openFaqIndex === index}
+                >
+                  <div className="flex items-center gap-4">
+                    <HelpCircle className="w-5 h-5 text-indigo-500 flex-shrink-0" />
+                    <span className="text-base font-semibold text-slate-900">
                       {faq.question}
-                    </h4>
-                    <p className="text-slate-600 text-sm leading-relaxed">
-                      {faq.answer}
-                    </p>
+                    </span>
+                  </div>
+                  <ChevronDown
+                    className={`w-5 h-5 text-slate-400 transition-transform duration-300 ${
+                      openFaqIndex === index ? "rotate-180" : ""
+                    }`}
+                  />
+                </button>
+
+                {/* Accordion Content with Animation */}
+                <div
+                  className={`overflow-hidden transition-all duration-300 ease-in-out ${
+                    openFaqIndex === index
+                      ? "max-h-48 opacity-100"
+                      : "max-h-0 opacity-0"
+                  }`}
+                >
+                  <div className="px-6 pb-4 pt-6">
+                    <div className="flex items-start gap-4 ml-9">
+                      <p className="text-slate-600 text-sm leading-relaxed">
+                        {faq.answer}
+                      </p>
+                    </div>
                   </div>
                 </div>
               </div>
