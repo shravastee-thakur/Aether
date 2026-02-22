@@ -4,6 +4,9 @@ import Login from "./pages/auth/Login";
 import OTPverify from "./pages/auth/OTPverify";
 import ResetPassword from "./pages/auth/ResetPassword";
 import Signup from "./pages/auth/Signup";
+import Dashboard from "./pages/Dashboard";
+import Profile from "./pages/Profile";
+import WorkspaceSelector from "./pages/workspace/WorkspaceSelector";
 
 function App() {
   return (
@@ -13,7 +16,10 @@ function App() {
       {/* <Login /> */}
       {/* <Signup /> */}
       {/* <ForgetPassword /> */}
-      <ResetPassword />
+      {/* <ResetPassword /> */}
+      {/* <Dashboard /> */}
+      {/* <Profile /> */}
+      <WorkspaceSelector />
     </div>
   );
 }
