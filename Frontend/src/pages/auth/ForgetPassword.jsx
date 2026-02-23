@@ -78,7 +78,7 @@ const ForgetPassword = () => {
                   htmlFor="email"
                   className="block text-sm font-medium text-slate-700 mb-1.5"
                 >
-                  Work Email
+                  Email
                 </label>
                 <div className="relative">
                   <div className="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none">
@@ -91,7 +91,7 @@ const ForgetPassword = () => {
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
                     className="block w-full pl-11 pr-4 py-3 bg-white border border-slate-200 rounded-lg text-slate-900 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-[#0747a6]/20 focus:border-[#0747a6] transition-all duration-200"
-                    placeholder="john@company.com"
+                    placeholder="name@example.com"
                   />
                 </div>
               </div>

@@ -80,8 +80,6 @@ const Features = () => {
                 {feature.description}
               </p>
 
-             
-
               {/* Optional: Glow Effect behind icon on hover */}
               <div
                 className={`absolute -right-4 -bottom-4 w-24 h-24 bg-gradient-to-br ${feature.gradient} opacity-0 group-hover:opacity-5 blur-2xl rounded-full transition-opacity duration-500`}

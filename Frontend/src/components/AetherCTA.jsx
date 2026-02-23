@@ -53,12 +53,8 @@ const AetherCTA = () => {
             {/* Trust Micro-copy */}
             <p className="mt-4 text-xs text-slate-500">
               By signing up, you agree to our{" "}
-              <a href="#" className="underline hover:text-slate-700">
-                Terms
-              </a>{" "}
-              and{" "}
-              <a href="#" className="underline hover:text-slate-700">
-                Privacy Policy
+              <a href="/privacy" className="underline hover:text-slate-700">
+                Aether Privacy Policy
               </a>
               .
             </p>

@@ -12,9 +12,7 @@ const OTPverify = () => {
 
   // Two Timers: Expiry (Security) & Resend (Anti-spam)
   const [expiryTime, setExpiryTime] = useState(300); // 5 minutes
- 
 
- 
   const [isExpiring, setIsExpiring] = useState(false);
   const inputRefs = useRef([]);
 
@@ -28,8 +26,6 @@ const OTPverify = () => {
       return () => clearTimeout(timer);
     }
   }, [expiryTime]);
-
-  
 
   const handleChange = (element, index) => {
     if (isNaN(element.value)) return;
@@ -66,8 +62,6 @@ const OTPverify = () => {
     const otpCode = otp.join("");
     console.log("OTP Submitted:", otpCode);
   };
-
-  
 
   // Format Time (MM:SS)
   const formatTime = (seconds) => {
@@ -155,12 +149,8 @@ const OTPverify = () => {
             <span>Verify Code</span>
             <CheckCircle className="w-5 h-5" />
           </button>
-
-          
         </form>
       </div>
-
-     
     </div>
   );
 };

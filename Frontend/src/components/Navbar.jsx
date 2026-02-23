@@ -55,7 +55,6 @@ const Navbar = () => {
                 <p className="text-sm font-semibold text-slate-900 leading-none">
                   Alex Morgan
                 </p>
-               
               </div>
 
               <div className="relative">

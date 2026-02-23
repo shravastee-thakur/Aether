@@ -1,5 +1,5 @@
-import React from "react";
 import { ArrowRight } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const Hero = () => {
   return (
@@ -58,7 +58,9 @@ const Hero = () => {
           <div className="absolute -inset-0.5 bg-gradient-to-r from-indigo-500 to-cyan-500 rounded-lg blur opacity-20 group-hover:opacity-40 transition duration-500"></div>
 
           <button className="relative flex items-center gap-3 px-8 py-4 bg-[#0747a6] rounded-lg leading-none text-white font-semibold hover:bg-indigo-600 transition-all duration-300 hover:scale-[1.02] active:scale-[0.98] shadow-lg shadow-slate-900/20">
-            <span>Enter the Aether</span>
+            <Link to={"/login"}>
+              <span>Enter the Aether</span>
+            </Link>
             <ArrowRight className="w-5 h-5 text-indigo-300 group-hover:translate-x-1 transition-transform" />
           </button>
         </div>

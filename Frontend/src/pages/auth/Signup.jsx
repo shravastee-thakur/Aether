@@ -87,7 +87,7 @@ const Signup = () => {
               htmlFor="email"
               className="block text-sm font-medium text-slate-700 mb-1.5"
             >
-              Work Email
+              Email
             </label>
             <div className="relative">
               <div className="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none">
@@ -158,18 +158,12 @@ const Signup = () => {
               className="text-sm text-slate-600 leading-relaxed"
             >
               I agree to the{" "}
-              <a
-                href="/terms"
-                className="text-[#0747a6] hover:underline font-medium"
-              >
-                Terms of Service
-              </a>{" "}
-              and{" "}
+              
               <a
                 href="/privacy"
                 className="text-[#0747a6] hover:underline font-medium"
               >
-                Privacy Policy
+                Aether Privacy Policy
               </a>
             </label>
           </div>

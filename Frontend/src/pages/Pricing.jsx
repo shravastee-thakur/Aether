@@ -1,5 +1,12 @@
 import React, { useState } from "react";
-import { Check, X, HelpCircle, ArrowRight, Building2, ChevronDown } from 'lucide-react';
+import {
+  Check,
+  X,
+  HelpCircle,
+  ArrowRight,
+  Building2,
+  ChevronDown,
+} from "lucide-react";
 
 const Pricing = () => {
   const [billingCycle, setBillingCycle] = useState("annual"); // 'annual' or 'monthly'
